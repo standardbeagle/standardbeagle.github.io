@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Standard Beagle — developer tools, MCP servers, and agent infrastructure</title>
+    <meta
+      name="description"
+      content="Open-source developer tooling from Standard Beagle: MCP servers, agent infrastructure, process supervision, GraphQL and Apache AGE clients, and cross-platform shells."
+    />
+    <link rel="canonical" href="https://standardbeagle.github.io/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0d1117" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Standard Beagle" />
+    <meta property="og:title" content="Standard Beagle — developer tools, MCP servers, and agent infrastructure" />
+    <meta
+      property="og:description"
+      content="Open-source developer tooling: MCP servers, agent infrastructure, process supervision, GraphQL and Apache AGE clients, and cross-platform shells."
+    />
+    <meta property="og:url" content="https://standardbeagle.github.io/" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://standardbeagle.github.io/#org",
+            "name": "Standard Beagle",
+            "url": "https://standardbeagle.github.io/",
+            "sameAs": ["https://github.com/standardbeagle"]
+          },
+          {
+            "@type": "CollectionPage",
+            "name": "Standard Beagle projects",
+            "url": "https://standardbeagle.github.io/",
+            "isPartOf": { "@id": "https://standardbeagle.github.io/#org" }
+          }
+        ]
+      }
+    </script>
+    <style>
+      :root {
+        --bg: #0d1117;
+        --bg-alt: #161b22;
+        --border: #30363d;
+        --fg: #e6edf3;
+        --fg-dim: #8b949e;
+        --accent: #58d68d;
+        --accent-2: #f0b429;
+        --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.6;
+      }
+      a { color: var(--accent); }
+      header {
+        border-bottom: 1px solid var(--border);
+        padding: 3.5rem 2rem 3rem;
+        text-align: center;
+      }
+      header h1 { font-size: 2.4rem; margin: 0 0 0.75rem; }
+      header h1 .mark { font-family: var(--mono); color: var(--accent); }
+      header p {
+        color: var(--fg-dim);
+        max-width: 42rem;
+        margin: 0 auto;
+        font-size: 1.1rem;
+      }
+      header .links { margin-top: 1.5rem; font-size: 0.95rem; }
+      main { max-width: 1040px; margin: 0 auto; padding: 2rem; }
+      h2 {
+        font-size: 1.15rem;
+        font-family: var(--mono);
+        color: var(--accent-2);
+        margin: 2.5rem 0 0.25rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 0.4rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 1rem;
+        margin: 1.25rem 0;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-alt);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 1.15rem 1.35rem;
+        text-decoration: none;
+        color: inherit;
+      }
+      .card:hover { border-color: var(--accent); }
+      .card h3 {
+        margin: 0 0 0.4rem;
+        font-family: var(--mono);
+        font-size: 1rem;
+        color: var(--accent);
+      }
+      .card p { margin: 0 0 0.9rem; color: var(--fg-dim); font-size: 0.92rem; flex: 1; }
+      .card .meta {
+        font-size: 0.75rem;
+        color: var(--fg-dim);
+        font-family: var(--mono);
+        display: flex;
+        gap: 0.9rem;
+        flex-wrap: wrap;
+      }
+      footer {
+        border-top: 1px solid var(--border);
+        color: var(--fg-dim);
+        text-align: center;
+        padding: 2.5rem 2rem;
+        font-size: 0.85rem;
+      }
+      footer a { color: var(--fg-dim); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><span class="mark">standard</span>beagle</h1>
+      <p>
+        Open-source developer tooling — MCP servers and agent infrastructure, process supervision,
+        database APIs, and cross-platform shells. Everything here is MIT or Apache licensed and
+        built in the open.
+      </p>
+      <p class="links"><a href="https://github.com/standardbeagle">github.com/standardbeagle</a></p>
+    </header>
+
+    <main>
+      <h2>AI agents &amp; MCP</h2>
+      <div class="grid">
+        <a class="card" href="/tman/">
+          <h3>tman</h3>
+          <p>
+            Supervises every process it launches — wall-clock and stall kills, memory and CPU
+            culling, and automatic reaping of the orphans AI agents leave behind.
+          </p>
+          <span class="meta"><span>C#</span><span>NativeAOT</span></span>
+        </a>
+        <a class="card" href="/agnt/">
+          <h3>agnt</h3>
+          <p>
+            MCP server for development tooling: project detection, process management, and a reverse
+            proxy with frontend instrumentation.
+          </p>
+          <span class="meta"><span>Go</span><span>MCP</span></span>
+        </a>
+        <a class="card" href="/mcp-tui/">
+          <h3>mcp-tui</h3>
+          <p>
+            Fast terminal UI and CLI for testing, debugging, and automating MCP servers — STDIO, SSE,
+            HTTP, and Streamable HTTP, on the official MCP Go SDK.
+          </p>
+          <span class="meta"><span>Go</span><span>MCP</span></span>
+        </a>
+        <a class="card" href="/slop-mcp/">
+          <h3>slop-mcp</h3>
+          <p>
+            MCP server for the SLOP protocol — one gateway that registers, discovers, and executes
+            tools across many MCP servers.
+          </p>
+          <span class="meta"><span>Go</span><span>MCP</span></span>
+        </a>
+        <a class="card" href="/caveman-mcp/">
+          <h3>caveman-mcp</h3>
+          <p>
+            MCP server doing two-pass Wenyan compression for URLs, files, diffs, and logs — context
+            compression for long-running agent sessions.
+          </p>
+          <span class="meta"><span>Go</span><span>MCP</span></span>
+        </a>
+        <a class="card" href="/standardbeagle-tools/">
+          <h3>standardbeagle-tools</h3>
+          <p>
+            Claude Code marketplace plugins — agnt (browser superpowers), lci (code intelligence),
+            and a combined bundle.
+          </p>
+          <span class="meta"><span>TypeScript</span><span>Claude Code</span></span>
+        </a>
+      </div>
+
+      <h2>Databases &amp; APIs</h2>
+      <div class="grid">
+        <a class="card" href="/BifrostQL/">
+          <h3>BifrostQL</h3>
+          <p>
+            Zero-config GraphQL API for an existing database. One connection string, full API, no
+            schema authoring.
+          </p>
+          <span class="meta"><span>C#</span><span>GraphQL</span></span>
+        </a>
+        <a class="card" href="/ageSchemaClient/">
+          <h3>ageSchemaClient</h3>
+          <p>
+            Fluent Apache AGE client with schema-driven bulk data loading for graph workloads on
+            PostgreSQL.
+          </p>
+          <span class="meta"><span>TypeScript</span><span>Apache AGE</span></span>
+        </a>
+      </div>
+
+      <h2>Shells &amp; libraries</h2>
+      <div class="grid">
+        <a class="card" href="/ps-bash/">
+          <h3>ps-bash</h3>
+          <p>
+            Bash commands for PowerShell — real flags, real output, typed objects underneath.
+            67 commands, 775 tests, cross-platform.
+          </p>
+          <span class="meta"><span>C#</span><span>PowerShell</span></span>
+        </a>
+        <a class="card" href="/beagle-core/">
+          <h3>Virtual Router</h3>
+          <p>Memory-only, hook-based routing for React.</p>
+          <span class="meta"><span>TypeScript</span><span>React</span></span>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      Standard Beagle · <a href="https://github.com/standardbeagle">source on GitHub</a> ·
+      <a href="/sitemap.xml">sitemap</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap index. The root's own pages live in sitemap-sites.xml; the entries below are
+  the project sites that publish a sitemap of their own. A project without one is still
+  reachable, because its home page is listed in sitemap-sites.xml.
+-->
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap><loc>https://standardbeagle.github.io/sitemap-sites.xml</loc></sitemap>
+  <sitemap><loc>https://standardbeagle.github.io/tman/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://standardbeagle.github.io/agnt/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://standardbeagle.github.io/slop-mcp/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://standardbeagle.github.io/ageSchemaClient/sitemap.xml</loc></sitemap>
+</sitemapindex>
