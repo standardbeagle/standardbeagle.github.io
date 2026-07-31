@@ -3,11 +3,38 @@
   Sitemap index. The root's own pages live in sitemap-sites.xml; the entries below are
   the project sites that publish a sitemap of their own. A project without one is still
   reachable, because its home page is listed in sitemap-sites.xml.
+
+  Each lastmod is the Last-Modified the host actually serves for that child sitemap, which
+  is what decides whether Google bothers re-fetching it. This file is hand-maintained, so a
+  lastmod here goes stale the moment a project redeploys without this file being touched —
+  a date that claims a child is older than it is costs a delayed recrawl, not an error.
+  Refresh them with:
+
+      for u in sitemap-sites.xml tman/sitemap.xml agnt/sitemap.xml \
+               slop-mcp/sitemap.xml ageSchemaClient/sitemap.xml; do
+        printf '%-28s %s\n' "$u" \
+          "$(curl -sI "https://standardbeagle.github.io/$u" | grep -i '^last-modified')"
+      done
 -->
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>https://standardbeagle.github.io/sitemap-sites.xml</loc></sitemap>
-  <sitemap><loc>https://standardbeagle.github.io/tman/sitemap.xml</loc></sitemap>
-  <sitemap><loc>https://standardbeagle.github.io/agnt/sitemap.xml</loc></sitemap>
-  <sitemap><loc>https://standardbeagle.github.io/slop-mcp/sitemap.xml</loc></sitemap>
-  <sitemap><loc>https://standardbeagle.github.io/ageSchemaClient/sitemap.xml</loc></sitemap>
+  <sitemap>
+    <loc>https://standardbeagle.github.io/sitemap-sites.xml</loc>
+    <lastmod>2026-07-30</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://standardbeagle.github.io/tman/sitemap.xml</loc>
+    <lastmod>2026-07-31</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://standardbeagle.github.io/agnt/sitemap.xml</loc>
+    <lastmod>2026-07-20</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://standardbeagle.github.io/slop-mcp/sitemap.xml</loc>
+    <lastmod>2026-05-06</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://standardbeagle.github.io/ageSchemaClient/sitemap.xml</loc>
+    <lastmod>2025-08-02</lastmod>
+  </sitemap>
 </sitemapindex>
