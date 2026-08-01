@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://standardbeagle.github.io/</loc><priority>1.0</priority></url>
-  <url><loc>https://standardbeagle.github.io/tman/</loc><priority>0.8</priority></url>
-  <url><loc>https://standardbeagle.github.io/agnt/</loc><priority>0.8</priority></url>
-  <url><loc>https://standardbeagle.github.io/mcp-tui/</loc><priority>0.8</priority></url>
-  <url><loc>https://standardbeagle.github.io/slop-mcp/</loc><priority>0.8</priority></url>
-  <url><loc>https://standardbeagle.github.io/caveman-mcp/</loc><priority>0.8</priority></url>
-  <url><loc>https://standardbeagle.github.io/standardbeagle-tools/</loc><priority>0.8</priority></url>
-  <url><loc>https://standardbeagle.github.io/BifrostQL/</loc><priority>0.8</priority></url>
-  <url><loc>https://standardbeagle.github.io/ageSchemaClient/</loc><priority>0.8</priority></url>
-  <url><loc>https://standardbeagle.github.io/ps-bash/</loc><priority>0.8</priority></url>
-  <url><loc>https://standardbeagle.github.io/beagle-core/</loc><priority>0.8</priority></url>
+  <url><loc>https://dev.standardbeagle.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://dev.standardbeagle.com/tman/</loc><priority>0.8</priority></url>
+  <url><loc>https://dev.standardbeagle.com/agnt/</loc><priority>0.8</priority></url>
+  <url><loc>https://dev.standardbeagle.com/mcp-tui/</loc><priority>0.8</priority></url>
+  <url><loc>https://dev.standardbeagle.com/slop-mcp/</loc><priority>0.8</priority></url>
+  <url><loc>https://dev.standardbeagle.com/caveman-mcp/</loc><priority>0.8</priority></url>
+  <url><loc>https://dev.standardbeagle.com/standardbeagle-tools/</loc><priority>0.8</priority></url>
+  <url><loc>https://dev.standardbeagle.com/BifrostQL/</loc><priority>0.8</priority></url>
+  <url><loc>https://dev.standardbeagle.com/ageSchemaClient/</loc><priority>0.8</priority></url>
+  <url><loc>https://dev.standardbeagle.com/ps-bash/</loc><priority>0.8</priority></url>
+  <url><loc>https://dev.standardbeagle.com/beagle-core/</loc><priority>0.8</priority></url>
 </urlset>

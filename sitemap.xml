@@ -13,28 +13,28 @@
       for u in sitemap-sites.xml tman/sitemap.xml agnt/sitemap.xml \
                slop-mcp/sitemap.xml ageSchemaClient/sitemap.xml; do
         printf '%-28s %s\n' "$u" \
-          "$(curl -sI "https://standardbeagle.github.io/$u" | grep -i '^last-modified')"
+          "$(curl -sI "https://dev.standardbeagle.com/$u" | grep -i '^last-modified')"
       done
 -->
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://standardbeagle.github.io/sitemap-sites.xml</loc>
+    <loc>https://dev.standardbeagle.com/sitemap-sites.xml</loc>
     <lastmod>2026-07-30</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://standardbeagle.github.io/tman/sitemap.xml</loc>
+    <loc>https://dev.standardbeagle.com/tman/sitemap.xml</loc>
     <lastmod>2026-07-31</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://standardbeagle.github.io/agnt/sitemap.xml</loc>
+    <loc>https://dev.standardbeagle.com/agnt/sitemap.xml</loc>
     <lastmod>2026-07-20</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://standardbeagle.github.io/slop-mcp/sitemap.xml</loc>
+    <loc>https://dev.standardbeagle.com/slop-mcp/sitemap.xml</loc>
     <lastmod>2026-05-06</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://standardbeagle.github.io/ageSchemaClient/sitemap.xml</loc>
+    <loc>https://dev.standardbeagle.com/ageSchemaClient/sitemap.xml</loc>
     <lastmod>2025-08-02</lastmod>
   </sitemap>
 </sitemapindex>

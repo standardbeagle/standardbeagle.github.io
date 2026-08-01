@@ -1,4 +1,4 @@
-# https://standardbeagle.github.io/
+# https://dev.standardbeagle.com/
 #
 # Serves every Standard Beagle project site as a subpath of this host, so this file
 # governs all of them — a robots.txt under a project path is ignored by crawlers.
@@ -6,4 +6,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://standardbeagle.github.io/sitemap.xml
+Sitemap: https://dev.standardbeagle.com/sitemap.xml

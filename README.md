@@ -15,7 +15,7 @@ only from the **domain root**, and the domain root belongs here:
 | `sitemap.xml` | Can live anywhere, but a single index at the root is the one URL to submit for every project at once. |
 | `404.html` | The user site's 404 page is served for unmatched paths across the whole host, including paths under a project that has no 404 of its own. |
 
-Before this repository existed, `https://standardbeagle.github.io/` returned **404**, so none of the
+Before this repository existed, `https://dev.standardbeagle.com/` returned **404**, so none of the
 above was servable for any of the eleven project sites and the one URL they all share was an error
 page.
 
@@ -44,7 +44,7 @@ No build step and no dependencies — GitHub Pages serves this directory as-is f
 trusted. Check before adding:
 
 ```sh
-curl -s -o /dev/null -w '%{http_code}\n' -L https://standardbeagle.github.io/<project>/
+curl -s -o /dev/null -w '%{http_code}\n' -L https://dev.standardbeagle.com/<project>/
 ```
 
 `brummer` has Pages enabled but serves 404, so it is deliberately not linked here. Add it once it
