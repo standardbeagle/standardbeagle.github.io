@@ -10,8 +10,8 @@
   a date that claims a child is older than it is costs a delayed recrawl, not an error.
   Refresh them with:
 
-      for u in sitemap-sites.xml tman/sitemap.xml agnt/sitemap.xml \
-               slop-mcp/sitemap.xml ageSchemaClient/sitemap.xml; do
+      for u in sitemap-sites.xml feedforge/sitemap.xml tman/sitemap.xml \
+               agnt/sitemap.xml slop-mcp/sitemap.xml ageSchemaClient/sitemap.xml; do
         printf '%-28s %s\n' "$u" \
           "$(curl -sI "https://dev.standardbeagle.com/$u" | grep -i '^last-modified')"
       done
@@ -19,26 +19,26 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://dev.standardbeagle.com/sitemap-sites.xml</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://dev.standardbeagle.com/feedforge/sitemap-index.xml</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://dev.standardbeagle.com/feedforge/sitemap.xml</loc>
+    <lastmod>2026-09-25</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://dev.standardbeagle.com/tman/sitemap.xml</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://dev.standardbeagle.com/agnt/sitemap.xml</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-09-27</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://dev.standardbeagle.com/slop-mcp/sitemap.xml</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://dev.standardbeagle.com/ageSchemaClient/sitemap.xml</loc>
-    <lastmod>2025-08-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </sitemap>
 </sitemapindex>
